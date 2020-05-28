@@ -157,7 +157,6 @@ json_string = MovieSerializer.new(movie).serializable_hash.to_json
     }
   }
 }
-
 ```
 
 #### The Optionality of `set_type`
@@ -183,9 +182,9 @@ set_key_transform :underscore # "some_key" => "some_key"
 ```
 
 ### Attributes
-Attributes are defined in FastJsonapi using the `attributes` method.  This method is also aliased as `attribute`, which is useful when defining a single attribute.
+Attributes are defined in FastJsonapi using the `attributes` method. This method is also aliased as `attribute`, which is useful when defining a single attribute.
 
-By default, attributes are read directly from the model property of the same name.  In this example, `name` is expected to be a property of the object being serialized:
+By default, attributes are read directly from the model property of the same name. In this example, `name` is expected to be a property of the object being serialized:
 
 ```ruby
 class MovieSerializer
@@ -381,7 +380,7 @@ end
 So for the example above, FastJsonapi will call the cache instance like this:
 
 ```ruby
-Rails.cache.fetch(record, namespace: 'fast-jsonapi, expires_in: 1.hour) { ... }
+Rails.cache.fetch(record, namespace: 'fast-jsonapi', expires_in: 1.hour) { ... }
 ```
 
 ### Params
